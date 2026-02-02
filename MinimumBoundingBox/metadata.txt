@@ -3,7 +3,7 @@ name=Minimum Bounding Box
 qgisMinimumVersion=3.0
 description=Create layer with extents(minx,miny, maxx, maxy) and extents geometry.
 about=Creates minimum bounding geometries (box, oriented rectangle, circle, convex hull) with optional grouping. You will be able to create a Bounding Box Geometry for each polygon from polygons layer, create new layer with bounding boxes as thier geometries. You will also get minx, miny, maxx, maxy, and extent column conveniently.
-version=1.1
+version=1.2
 author=Abdishakur
 email=shakurgds@gmail.com
 icon=Icon.png 
@@ -15,8 +15,9 @@ homepage=https://github.com/shakurgds/bounding-box-qgis-plugin
 tracker=https://github.com/shakurgds/bounding-box-qgis-plugin/issues
 repository=https://github.com/shakurgds/bounding-box-qgis-plugin
 
-experimental=true
+experimental=false
 deprecated=false
 
 tags=python, bounding box, convex hull, oriented rectangle, circle, polygon, extent, minx, miny, maxx, maxy.
+
 
