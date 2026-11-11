@@ -1,23 +1,26 @@
 [general]
 name=Minimum Bounding Box
-qgisMinimumVersion=3.0
+qgisMinimumVersion=3.40
+qgisMaximumVersion=4.99
+supportsQt6=True
 description=Create layer with extents(minx,miny, maxx, maxy) and extents geometry.
-about=Creates minimum bounding geometries (box, oriented rectangle, circle, convex hull) with optional grouping. You will be able to create a Bounding Box Geometry for each polygon from polygons layer, create new layer with bounding boxes as thier geometries. You will also get minx, miny, maxx, maxy, and extent column conveniently.
-version=1.2
+about=Creates minimum bounding geometries (envelope, minimum oriented rectangle, circle, convex hull) for each feature or for groups of features. Adds min_x, min_y, max_x, max_y and extent columns, plus optional measurements: width, height, rotation angle, area, perimeter and fill ratio (how much of its bounding shape a polygon fills). Available as a dialog and as a Processing algorithm for the Toolbox, Graphical Modeler and batch mode. Works in QGIS 3.40+ and QGIS 4.
+version=2.1
 author=Abdishakur
 email=shakurgds@gmail.com
-icon=Icon.png 
+icon=Icon.png
 license=Apache License 2.0
 
-url=https://github.com/shakurgds/bounding-box-qgis-plugin
-source=https://github.com/shakurgds/bounding-box-qgis-plugin
-homepage=https://github.com/shakurgds/bounding-box-qgis-plugin
-tracker=https://github.com/shakurgds/bounding-box-qgis-plugin/issues
-repository=https://github.com/shakurgds/bounding-box-qgis-plugin
+changelog=2.1 - Measurement fields (width, height, angle, area, perimeter, fill_ratio). Processing algorithm usable in the Toolbox, Modeler and batch mode. Selected-features-only option. Unit test suite.
+  2.0 - QGIS 4 / Qt6 support (also runs on QGIS 3.40+). Fixed oriented rectangle and circle outputs, duplicate group field, features without geometry, and CRS without an authority ID.
+  1.2 - Grouping and field selection.
 
+homepage=https://github.com/shakurgds/min-bounding-box-plugin
+tracker=https://github.com/shakurgds/min-bounding-box-plugin/issues
+repository=https://github.com/shakurgds/min-bounding-box-plugin
+
+hasProcessingProvider=yes
 experimental=false
 deprecated=false
 
-tags=python, bounding box, convex hull, oriented rectangle, circle, polygon, extent, minx, miny, maxx, maxy.
-
-
+tags=python, bounding box, convex hull, oriented rectangle, circle, polygon, extent, minx, miny, maxx, maxy, processing, measurement, qgis4
